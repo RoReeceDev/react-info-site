@@ -1,8 +1,18 @@
 import React from 'react'
+import logo from '../assets/react-icon-small.png'
+
 
 const Navbar = () => {
     return(
-    <h1>This is the Nav</h1>
+    <header className="nav-bar">
+        <div className="nav-left">
+        <img src={logo} alt="React Logo."/>
+        <h3>ReactFacts</h3>
+        </div>
+        <div className="nav-right">
+        <h4>React Course - Project 1</h4>
+        </div>
+    </header>
     )
 }
 

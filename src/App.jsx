@@ -6,8 +6,8 @@ import Main from './components/Main.jsx'
 const App = () => {
   return(
     <>
-    <Main />
     <Navbar />
+    <Main />
     </>
   )
 }
