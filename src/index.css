@@ -9,8 +9,10 @@
 
  body {
    margin: 0;
+   background-color: rgb(39, 45, 52);
  }
-
+ 
+/**************************** Navbar Component Styling *********************************/
  .nav-bar {
    display: flex;
    width: 100%;
@@ -54,6 +56,43 @@
    font-weight: 600;
    color: rgb(188, 196, 205);
  }
+
+ /**************************** Main Component Styling *********************************/
+main {
+  padding: 57px 27px;
+  background-image: url(./assets/react-icon-large.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: 75%;
+}
+
+ .main-title{
+  font-size: 4rem;
+  color: rgb(254, 255, 255);
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.05rem;
+ }
+
+ .main-list {
+  margin-top: 4.6rem;
+  max-width: 400px;
+ }
+
+ .main-list > li {
+  color: rgb(188, 196, 205);
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  padding-block: 10px;
+
+ }
+
+ .main-list > li::marker {
+  font-size: 2.2rem;
+  color: rgb(0, 216, 255);
+
+ }
+
 
  :root {
    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
