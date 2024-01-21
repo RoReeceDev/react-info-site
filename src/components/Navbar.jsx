@@ -4,7 +4,7 @@ import logo from '../assets/react-icon-small.png'
 
 const Navbar = () => {
     return(
-    <header className="nav-bar">
+    <nav className="nav-bar">
         <div className="nav-left">
         <img src={logo} alt="React Logo."/>
         <h3>ReactFacts</h3>
@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="nav-right">
         <h4>React Course - Project 1</h4>
         </div>
-    </header>
+    </nav>
     )
 }
 
