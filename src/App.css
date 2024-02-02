@@ -1,7 +1,6 @@
 #root {
   margin: 0 auto;
   background-color: rgb(39, 45, 52);
-  height: 100vh;
 }
 
 * {
@@ -18,14 +17,36 @@ body {
   /* background-color: rgb(39, 45, 52); */
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 /**************************** Navbar Component Styling *********************************/
-.nav-bar {
+nav {
   display: flex;
   width: 100%;
-  background-color: rgb(32, 34, 42);
+  background-color: #ffffff;
   align-items: center;
-  height: 90px;
-  padding: 1% 3%;
+  height: 60px;
+  padding: 30px 25px;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+nav.dark {
+  background-color: #21222A;
 }
 
 .nav-right,
@@ -43,60 +64,123 @@ body {
   align-items: center;
 }
 
-.nav-left > img {
+.nav-left>img {
   width: 30px;
   height: auto;
-  margin-right: 7px;
+  margin-right: 10px;
 }
 
 .nav-left>h3 {
   font-size: 2.2rem;
-  margin:0;
   font-weight: 700;
   color: rgb(0, 216, 255);
 }
 
 .nav-right>h4 {
   font-size: 1.8rem;
-  margin: 0;
   font-weight: 600;
   color: rgb(188, 196, 205);
 }
 
+.toggler {
+  display: flex;
+  align-items: center;
+}
+
+.toggler p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.toggler--slider {
+  width: 25px;
+  height: 13px;
+  background-color: #2B283A;
+  border-radius: 2rem;
+  margin-inline: 7px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid black;
+  box-sizing: content-box;
+}
+
+nav.dark .toggler--slider {
+  border-color: white;
+  background-color: #F5F5F5;
+}
+
+.toggler--slider--circle {
+  height: 13px;
+  width: 13px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+nav.dark .toggler--slider--circle {
+  background-color: black;
+}
+
+.toggler--light {
+  color: #2B283A;
+}
+
+nav.dark .toggler--light {
+  color: #918E9B;
+}
+
+.toggler--dark {
+  color: #D5D4D8;
+}
+
+nav.dark .toggler-dark {
+  color: #FFFFFF;
+}
+
+nav.dark .toggler--slider {
+  justify-content: flex-end;
+}
+
 /**************************** Main Component Styling *********************************/
 main {
- padding: 57px 27px;
- background-image: url(./assets/react-icon-large.png);
- background-repeat: no-repeat;
- background-position-x: right;
- background-position-y: 75%;
+  padding: 57px 27px;
+  background-image: url(./assets/react-icon-light.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  flex: 1 1 auto;
+  background-color: white;
+  color: #2B283A;
 
 }
 
-.main-title{
- font-size: 4rem;
- color: rgb(254, 255, 255);
- font-weight: 700;
- margin: 0;
- letter-spacing: -0.05rem;
+main.dark {
+  background-image: url("./assets/react-icon-dark.png"); 
+  background-color: #282D35;
+  color: white;    
+}
+
+.main-title {
+  font-size: 4rem;
+  margin: 0;
+  letter-spacing: -0.05rem;
 }
 
 .main-list {
- margin-top: 4.6rem;
- max-width: 400px;
+  margin-top: 4.6rem;
+  max-width: 400px;
 }
 
-.main-list > li {
- color: rgb(188, 196, 205);
- font-size: 1.6rem;
- line-height: 1.9rem;
- padding-block: 10px;
+.main-list>li {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  padding-block: 10px;
 
 }
 
-.main-list > li::marker {
- font-size: 2.2rem;
- color: rgb(0, 216, 255);
+.main-list>li::marker {
+  font-size: 2.2rem;
+  color: rgb(0, 216, 255);
 
 }
 
@@ -107,6 +191,7 @@ main {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
